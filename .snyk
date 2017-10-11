@@ -1,6 +1,53 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.7.1
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:cli:20160615':
+    - harp > terraform > harp-minify > html-minifier > cli:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+  'npm:ejs:20161130':
+    - harp > terraform > ejs:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+  'npm:ejs:20161130-1':
+    - harp > terraform > ejs:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+  'npm:fresh:20170908':
+    - harp > connect > fresh:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+    - harp > connect > serve-favicon > fresh:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+    - harp > send > fresh:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+    - harp > connect > serve-static > send > fresh:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+  'npm:marked:20170907':
+    - harp > terraform > marked:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+  'npm:mime:20170907':
+    - harp > mime:
+        reason: None given
+        expires: '2017-11-10T08:14:46.915Z'
+    - harp > send > mime:
+        reason: None given
+        expires: '2017-11-10T08:14:46.916Z'
+    - harp > connect > serve-static > send > mime:
+        reason: None given
+        expires: '2017-11-10T08:14:46.916Z'
+  'npm:qs:20170213':
+    - harp > connect > qs:
+        reason: None given
+        expires: '2017-11-10T08:14:46.916Z'
+    - harp > connect > body-parser > qs:
+        reason: None given
+        expires: '2017-11-10T08:14:46.916Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
@@ -70,3 +117,9 @@ patch:
   'npm:uglify-js:20151024':
     - harp > terraform > jade > transformers > uglify-js:
         patched: '2017-10-11T08:06:29.643Z'
+  'npm:marked:20150520':
+    - harp > terraform > marked:
+        patched: '2017-10-11T08:14:46.917Z'
+  'npm:uglify-js:20150824':
+    - harp > terraform > jade > transformers > uglify-js:
+        patched: '2017-10-11T08:14:46.917Z'
